@@ -1,6 +1,6 @@
 resource "aws_instance" "ec2" {
   ami = data.aws_ami.linux.id
-  instance_type = var.instance_type
+  instance_type = var.map["a"]
   vpc_security_group_ids = [aws_security_group.securityGroup.id]
 }
 resource "aws_security_group" "securityGroup" {
